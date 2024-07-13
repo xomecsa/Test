@@ -19,11 +19,15 @@ class NextPageVC: UIViewController, UITableViewDataSource {
         return table
     }()
     
+    lazy var barButton: UIBarButtonItem = {
+        UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(tableView)
+        navigationItem.rightBarButtonItem = barButton
         
         
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -49,6 +53,9 @@ class NextPageVC: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    @objc func add() {
+        tableView.backgroundColor = .red
+    }
     
     
 }
