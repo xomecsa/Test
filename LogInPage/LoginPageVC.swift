@@ -59,7 +59,8 @@ class LoginPageVC: UIViewController {
     }
     
    @objc func nextPage() {
-        
+       
+       navigationController?.pushViewController(NextPageVC(), animated: true)
     }
     
     
