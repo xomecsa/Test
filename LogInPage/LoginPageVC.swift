@@ -24,7 +24,6 @@ class LoginPageVC: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Name"
         textField.borderStyle = .roundedRect
-//        textField.heightAnchor.constraint(equalToConstant: 51).isActive = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -33,7 +32,6 @@ class LoginPageVC: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.borderStyle = .roundedRect
-//        textField.heightAnchor.constraint(equalToConstant: 51).isActive = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -42,7 +40,6 @@ class LoginPageVC: UIViewController {
         let button = UIButton()
         button.backgroundColor = .gray
         button.layer.cornerRadius = 10
-//        button.heightAnchor.constraint(equalToConstant: 51).isActive = true
         button.setTitle("login", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -56,11 +53,9 @@ class LoginPageVC: UIViewController {
         stackView.addArrangedSubview(PassTextField)
         stackView.addArrangedSubview(loginButton)
         
-//        stackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         stackView.topAnchor.constraint(equalTo: view.topAnchor,constant: 200).isActive = true
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 24).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
-//        stackView.heightAnchor.constraint(equalTo: view.heightAnchor,constant: 4).isActive = true
     }
     
     
