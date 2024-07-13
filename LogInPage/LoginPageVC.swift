@@ -13,8 +13,7 @@ class LoginPageVC: UIViewController {
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.spacing = 50
+        stackView.spacing = 20
         stackView.distribution = UIStackView.Distribution.fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -38,6 +37,7 @@ class LoginPageVC: UIViewController {
     
     lazy var loginButton: UIButton = {
         let button = UIButton()
+        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         button.backgroundColor = .gray
         button.layer.cornerRadius = 10
         button.setTitle("login", for: .normal)
@@ -56,6 +56,10 @@ class LoginPageVC: UIViewController {
         stackView.topAnchor.constraint(equalTo: view.topAnchor,constant: 200).isActive = true
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 24).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24).isActive = true
+    }
+    
+   @objc func nextPage() {
+        
     }
     
     
